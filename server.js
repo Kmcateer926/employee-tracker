@@ -28,13 +28,10 @@ function startPrompt() {
               "View All Departments?", 
               "View All Roles?",
               "View all Emplyees?", 
-              "Update Employee managers",
+              "Update Employee",
               "Add Employee?",
               "Add Role?",
               "Add Department?",
-              "Delete Employee?",
-              "Delete Role?",
-              "Delete Department?"
             ]
     }
 ]).then(function(val) {
