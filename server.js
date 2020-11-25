@@ -20,13 +20,19 @@ connection.connect(function(err) {
 
 var figlet = require("figlet");
 
-figlet("Employee Tracker!", function (err, data) {
-  if (err) {
-    console.log("Something went wrong...");
-    console.dir(err);
-    return;
-  }
-  console.log(data);
+figlet.text('Employee Tracker!', {
+    font: 'Ghost',
+    horizontalLayout: 'default',
+    verticalLayout: 'default',
+    width: 110,
+    whitespaceBreak: true
+}, function(err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    }
+    console.log(data);
 });
 
 
