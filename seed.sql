@@ -27,7 +27,7 @@ VALUE ("Account Manager", 160000, 3);
 
 -- EMPLOYEE SEEDS -------
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("John", "Doe", 1, 3);
+VALUE ("John", "Doe", null, 4);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
 VALUE ("Mike", "Chan", 1, 5);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
@@ -35,10 +35,10 @@ VALUE ("Ashely","Rodriquez", null, 1);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
 VALUE ("Kevin", "Tupik", 3, 6);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Malia", "Brown", 3, null);
+VALUE ("Malia", "Brown", null, 3);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
 VALUE ("Sarah", "Lourd", null, 2);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
 VALUE ("Tom", "Allen", 7, 7);
 INSERT INTO employee (first_name, last_name, manager_id, role_id)
-VALUE ("Christian", "Eckenzode", 2, 1);
+VALUE ("Christian", "Eckenzode", 1, 2);
