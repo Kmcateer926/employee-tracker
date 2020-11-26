@@ -292,8 +292,8 @@ function updateEmployee() {
             choices: selectRole(),
           },
         ])
-        .then(({ updateEmployeeRole, role }) => {
-          console.log({ updateEmployeeRole, role });
+        .then(({ lastName, role }) => {
+          console.log({ lastName, role });
 
           // .then(function(val) {
           //     var roleId = selectRole().indexOf(val.role) + 1
@@ -308,7 +308,7 @@ function updateEmployee() {
           //     },
           // function(err){
           //     if (err) throw err
-          console.table(val);
+          console.table(res);
           startPrompt();
           // })
         });
