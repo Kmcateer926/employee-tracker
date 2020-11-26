@@ -133,12 +133,12 @@ function addEmployee() {
   inquirer
     .prompt([
       {
-        name: "firstname",
+        name: "firstName",
         type: "input",
         message: "Enter their first name ",
       },
       {
-        name: "lastname",
+        name: "lastName",
         type: "input",
         message: "Enter their last name ",
       },
@@ -155,20 +155,20 @@ function addEmployee() {
         choices: selectManager(),
       },
     ])
-    .then(function (val) {
-      var roleId = selectRole().indexOf(val.role) + 1;
-      var managerId = selectManager().indexOf(val.choice) + 1;
+    .then(function (res) {
+      var roleId = selectRole().indexOf(res.role) + 1;
+      var managerId = selectManager().indexOf(res.choice) + 1;
       connection.query(
         "INSERT INTO employee SET ?",
         {
-          first_name: val.firstName,
-          last_name: val.lastName,
+          first_name: res.firstName,
+          last_name: res.lastName,
           manager_id: managerId,
           role_id: roleId,
         },
         function (err) {
           if (err) throw err;
-          console.table(val);
+          console.table(res);
           startPrompt();
         }
       );
